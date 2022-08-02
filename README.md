@@ -10,7 +10,7 @@ First run after setting up and creating the first class
 
 Following test convention where the framework is on the "src" folder and also creating the files to follow the page object model design pattern
 
-Cuando se utiliza el page object model, cada que se cambia de pagina debido a las interacciones tomadas se debe retornar un handle de la nueva página, la cual deberá tener su propio page object model 
+When using the page object model each time that the page changes due to interaction made with it a handle to the new page must be returned. This new page should have its proper page object model
 
 ![image](https://user-images.githubusercontent.com/78630957/182285873-86c85a07-0b27-4c6b-b900-9a3a9e219fdd.png)
-En este caso, cuando se hace click se entra a la pagina de login, por lo cual se debe retornar el handle de dicha pagina
+In this case, after clicking you enter the login page, therefore you must return the handle of said page
