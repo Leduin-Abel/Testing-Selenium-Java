@@ -14,3 +14,8 @@ When using the page object model each time that the page changes due to interact
 
 ![image](https://user-images.githubusercontent.com/78630957/182285873-86c85a07-0b27-4c6b-b900-9a3a9e219fdd.png)
 In this case, after clicking you enter the login page, therefore you must return the handle of said page
+
+
+![image](https://user-images.githubusercontent.com/78630957/182501600-0a7fbbd7-87c3-4064-ac92-e7948553a13f.png)
+
+After first test run we can see how how it reports the results
