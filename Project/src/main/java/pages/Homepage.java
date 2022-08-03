@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 
 public class Homepage {
     private WebDriver driver;
-    private By formAuthenticationLink = By.linkText("Form Authentication ");
+    private By formAuthenticationLink = By.linkText("Form Authentication");
 
     //constructor para el driver
     public  Homepage(WebDriver driver){
