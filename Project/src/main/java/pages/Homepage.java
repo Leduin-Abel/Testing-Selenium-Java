@@ -27,6 +27,10 @@ public class Homepage {
         clickLink("Dropdown");
         return new DropdownPage(driver);
     }
+    public HoversPage clickHovers(){
+        clickLink("Hovers");
+        return new HoversPage(driver);
+    }
 
     //Creando un nuevo metodo para darle mas flexibilidad al codigo
     private void clickLink(String linkText){
