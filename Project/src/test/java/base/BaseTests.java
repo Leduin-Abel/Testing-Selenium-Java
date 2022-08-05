@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import pages.Homepage;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public class BaseTests {
     public void setUp(){
         System.setProperty("webdriver.chrome.driver","chromedriver_folder/chromedriver.exe");
         driver = new ChromeDriver();
-        driver.get("https://the-internet.herokuapp.com/");//lanza el webdriver y carga un url
+        goHome();
         homepage = new Homepage(driver); //se le da un handle en la capa de test hacia la aplicacion
 
         /*Son interacciones del nivel del framework, acá va exclusivamente tests
@@ -34,7 +35,10 @@ public class BaseTests {
 
 
     }
-
+    @BeforeMethod
+    public void goHome(){
+        driver.get("https://the-internet.herokuapp.com/");//lanza el webdriver y carga un url
+    }
     @AfterClass
     public void tearDown(){
         driver.quit(); //cierra el navegador y termina la sesion

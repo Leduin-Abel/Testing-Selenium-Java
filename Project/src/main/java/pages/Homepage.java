@@ -36,6 +36,10 @@ public class Homepage {
         clickLink("Key Presses");
         return new KeyPressesPage(driver);
     }
+    public AlertsPage clickJavaScriptAlerts(){
+        clickLink("JavaScript Alerts");
+        return new AlertsPage(driver);
+    }
     //Creando un nuevo metodo para darle mas flexibilidad al codigo
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
