@@ -19,3 +19,10 @@ In this case, after clicking you enter the login page, therefore you must return
 ![image](https://user-images.githubusercontent.com/78630957/182501600-0a7fbbd7-87c3-4064-ac92-e7948553a13f.png)
 
 After first test run we can see how how it reports the results
+
+
+## Pop-ups 2 File Upload
+
+To "interact" with these sort of elements with Selenium Webdriver, one must bypass the pop-up window by passing the absolute path of the file directly to the "pick file" element on the page, shown on the picture below
+
+![image](https://user-images.githubusercontent.com/78630957/182991292-efd57d7a-c3eb-4e1d-9545-6cf0dbfaa1e5.png)
