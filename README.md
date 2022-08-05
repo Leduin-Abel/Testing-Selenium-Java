@@ -27,6 +27,6 @@ To "interact" with these sort of elements with Selenium Webdriver, one must bypa
 
 ![image](https://user-images.githubusercontent.com/78630957/182991292-efd57d7a-c3eb-4e1d-9545-6cf0dbfaa1e5.png)
 
-#Pop-ups 3 Modals
+# Pop-ups 3 Modals
 
 Unlike Javascript alerts and File upload pop-ups, modals actually do appear in the DOM of the page, so if one wishes to interact with the modal window just get the correct selector and carry on as normal. An important thing to take into account is that while a modal window is active or visible nothing else will be available to interact with, trying that will create an exception
