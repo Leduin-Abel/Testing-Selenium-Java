@@ -40,6 +40,12 @@ public class Homepage {
         clickLink("JavaScript Alerts");
         return new AlertsPage(driver);
     }
+
+    public WysiwygPage clickWysiPage(){
+        clickLink("WYSIWYG Editor");
+        return new WysiwygPage(driver);
+
+    }
     //Creando un nuevo metodo para darle mas flexibilidad al codigo
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
