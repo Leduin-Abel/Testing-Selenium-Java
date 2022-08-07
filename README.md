@@ -47,6 +47,8 @@ Unlike implicit waits, the explicit ones only are triggered when needed, and onl
 
 As seen in the image above to do explicit waits one need to instance a WebDriverWait object in order to be able to execute the command
 
+### Fluent waits
 
+Similar to explicit waits, with the added bonus of frequency and the capability to ignore certaing things, In other words, it can check every second whether or not an element has appeared in the DOM ignoring the NoSuchElement exception 
 
 
