@@ -38,5 +38,15 @@ Unlike Javascript alerts and File upload pop-ups, modals actually do appear in t
 
 As seen in the picture this command takes in a duration object and that object dictates the unit of time or whatever you need for your test, however, implicit waits can make your test slower because it will be triggered befored every interaction
 
+### Explicit waits
+
+![image](https://user-images.githubusercontent.com/78630957/183272814-68f238af-88b2-48c3-ad37-5d3851df5d81.png)
+
+Unlike implicit waits, the explicit ones only are triggered when needed, and only will aply within the context of the call, in this case the clickStart method
+
+
+As seen in the image above to do explicit waits one need to instance a WebDriverWait object in order to be able to execute the command
+
+
 
 
