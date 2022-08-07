@@ -55,3 +55,7 @@ Similar to explicit waits, with the added bonus of frequency and the capability 
 ## JavaScript
 
 Sometimes there are some actions which there are no libraries or plugins nor any other way to do, in these cases one must write JavaScript code in order to interact or do those actions, one example of this is scrolling.
+
+In order to be able to use the JavaScriptExecutor class one must cast the driver first, as seen in the picture below
+![image](https://user-images.githubusercontent.com/78630957/183313059-6402b837-157a-4ccb-aa85-c974b2e3845e.png)
+
