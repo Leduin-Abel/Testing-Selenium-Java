@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.Homepage;
 
+import java.time.Duration;
 import java.util.List;
 
 
@@ -20,6 +21,8 @@ public class BaseTests {
     public void setUp(){
         System.setProperty("webdriver.chrome.driver","chromedriver_folder/chromedriver.exe");
         driver = new ChromeDriver();
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); //Aplica una espera a toda la app
+
         goHome();
         homepage = new Homepage(driver); //se le da un handle en la capa de test hacia la aplicacion
 
