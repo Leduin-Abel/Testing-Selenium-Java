@@ -30,3 +30,13 @@ To "interact" with these sort of elements with Selenium Webdriver, one must bypa
 # Pop-ups 3 Modals
 
 Unlike Javascript alerts and File upload pop-ups, modals actually do appear in the DOM of the page, so if one wishes to interact with the modal window just get the correct selector and carry on as normal. An important thing to take into account is that while a modal window is active or visible nothing else will be available to interact with, trying that will create an exception
+
+# Waits
+
+# Implicit waits
+![image](https://user-images.githubusercontent.com/78630957/183272224-357f3358-734c-4412-a93c-6e9b5dcdd9db.png)
+
+As seen in the picture this command takes in a duration object and that object dictates the unit of time or whatever you need for your test, however, implicit waits can make your test slower because it will be triggered befored every interaction
+
+
+
