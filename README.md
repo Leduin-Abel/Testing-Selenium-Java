@@ -52,3 +52,6 @@ As seen in the image above to do explicit waits one need to instance a WebDriver
 Similar to explicit waits, with the added bonus of frequency and the capability to ignore certaing things, In other words, it can check every second whether or not an element has appeared in the DOM ignoring the NoSuchElement exception 
 
 
+## JavaScript
+
+Sometimes there are some actions which there are no libraries or plugins nor any other way to do, in these cases one must write JavaScript code in order to interact or do those actions, one example of this is scrolling.
