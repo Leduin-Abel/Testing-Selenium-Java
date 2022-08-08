@@ -1,15 +1,19 @@
 package base;
 
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import com.google.common.io.Files;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.Homepage;
+import utils.WindowManager;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
@@ -45,6 +49,48 @@ public class BaseTests {
     @AfterClass
     public void tearDown(){
         driver.quit(); //cierra el navegador y termina la sesion
+    }
+    @AfterMethod
+    //solo corre en fallas
+    public void takeScreenshotOfFailure(ITestResult result){ //ITestResult es de TestNG y es el resultado de una prueba
+       if(ITestResult.FAILURE == result.getStatus())
+       {
+           var camera = (TakesScreenshot)driver;
+           File screenshot = camera.getScreenshotAs(OutputType.FILE); //Toma pantallazos
+           try {
+               Files.move(screenshot, new File("src/main/resources/Screenshots/testFailure_" + result.getName() + ".png"));
+           }
+           catch (IOException e){
+               e.printStackTrace();
+           }
+       }
+
+        var camera = (TakesScreenshot)driver;
+        File screenshot = camera.getScreenshotAs(OutputType.FILE); //Toma pantallazos
+        //File es la clase
+        try {
+            Files.move(screenshot, new File("src/main/resources/Screenshots/test.png"));
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+
+
+    //Toma pantallazos despues de cada prueba
+     /* public void takeScreenshot(){
+        var camera = (TakesScreenshot)driver;
+        File screenshot = camera.getScreenshotAs(OutputType.FILE); //Toma pantallazos
+        //File es la clase
+        try {
+            Files.move(screenshot, new File("src/main/resources/Screenshots/test.png"));
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }*/
+
+    }
+    public WindowManager getWindowManager(){
+        return new WindowManager(driver);
     }
 
   /*  public static void main(String args[]) {

@@ -61,6 +61,12 @@ public class Homepage {
         clickLink("Infinite Scroll");
         return new InfiniteScrollPage(driver);
     }
+
+    public MultipleWindowsPage clickMultipleWindows(){
+        clickLink("Multiple Windows");
+        return new MultipleWindowsPage(driver);
+
+    }
     //Creando un nuevo metodo para darle mas flexibilidad al codigo
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
