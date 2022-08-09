@@ -11,7 +11,7 @@ public class KeysTests extends BaseTests {
     public void testBackspace(){
         var keyPage = homepage.clickKeyPresses();
         keyPage.enterText("A" + Keys.BACK_SPACE); //La clase Keys sirve para teclas especiales
-        assertEquals(keyPage.getResult(), "You entered: BACK_SPAC?E");
+        assertEquals(keyPage.getResult(), "You entered: BACK_SPACE");
     }
 
     @Test

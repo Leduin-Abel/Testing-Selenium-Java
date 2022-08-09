@@ -4,12 +4,15 @@ package base;
 import com.google.common.io.Files;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.events.EventFiringDecorator;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.Homepage;
+import utils.EventReporter;
 import utils.WindowManager;
 
 import java.io.File;
@@ -19,12 +22,14 @@ import java.util.List;
 
 
 public class BaseTests {
-    private WebDriver driver;
+   // private WebDriver driver;
+    private EventFiringWebDriver driver; // para que pueda llamar los event listeners debe ser ese especificio
     protected Homepage homepage;
     @BeforeClass
     public void setUp(){
         System.setProperty("webdriver.chrome.driver","chromedriver_folder/chromedriver.exe");
-        driver = new ChromeDriver();
+        driver = new EventFiringWebDriver(new ChromeDriver()); // este escucha por eventos
+        driver.register(new EventReporter()); // esta escuchando, le entra la clase donde estan los metodos
         //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); //Aplica una espera a toda la app
 
         goHome();
